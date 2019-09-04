@@ -1,0 +1,68 @@
+{# plantilla de nuestra aplicación #}
+{% extends 'base.html.twig' %}
+
+{# titulo #}
+{% block titulo %}
+Nuestro equipo
+{% endblock %}
+
+{# contenido #}
+{% block contenido %}
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Bar Shop
+        <small>Equipo</small>
+    </h1>
+    <!-- Image Header -->
+    <img class="img-fluid rounded mb-4" src="{{ asset('img/nosotros.jpg') }}" alt="">
+
+    <!-- Team members -->
+    <h2>Nuestro equipo</h2>
+
+    <!-- Marketing Icons Section -->
+    <div class="row">
+        <div class="col-lg-4 mb-4">
+            <div class="card h-100 text-center">
+                <img class="card-img-top" src="{{ asset('img/5.jpg') }}" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">CLASE DE ORO GRAN LUJO</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">Descripción</h6>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                </div>
+          <div class="card-footer">
+            <a href="#">sistemasfdn@gmail.com</a>
+          </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card h-100 text-center">
+                <img class="card-img-top" src="{{ asset('img/6.jpg') }}" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">CLASE DE ORO</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">Descripción</h6>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
+                </div>
+          <div class="card-footer">
+            <a href="#">sistemasfdn@gmail.com</a>
+          </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <div class="card h-100 text-center">
+                <img class="card-img-top" src="{{ asset('img/7.jpg') }}" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">PLATINO</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">Descripción</h6>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                </div>
+          <div class="card-footer">
+            <a href="#">sistemasfdn@gmail.com</a>
+          </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+</div>
+{% endblock %}

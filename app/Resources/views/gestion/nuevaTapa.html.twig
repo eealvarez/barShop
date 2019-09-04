@@ -1,0 +1,68 @@
+{# plantilla de nuestra aplicación #}
+{% extends 'base.html.twig' %}
+{% form_theme form 'form/tapaForm.html.twig' %}
+
+{# titulo #}
+{% block titulo %}
+Nueva Tapa
+{% endblock %}
+
+{# contenido #}
+{% block contenido %}
+<!-- Page Content -->
+<div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Nuevo bus
+        <!-- <small>Subheading</small> -->
+    </h1>
+    <!-- Portfolio Item Row -->
+    <div class="row">
+        <div class="col-md-8 mb-4">
+{# app/Resources/views/gestionTapas/nuevaTapa.html.twig #}
+{{ form_start(form) }}
+{{ form_widget(form) }}
+
+
+            {#
+            {{ form_errors(form) }}
+            <div class="control-group form-group">                
+        {{ form_label(form.nombre) }}
+        {{ form_errors(form.nombre) }}
+        {{ form_widget(form.nombre) }}                
+            </div>
+
+            <div class="control-group form-group">
+        {{ form_label(form.descripcion) }}
+        {{ form_errors(form.descripcion) }}
+        {{ form_widget(form.descripcion) }}
+            </div>
+
+            <div class="control-group form-group">
+        {{ form_label(form.ingredientes) }}
+        {{ form_errors(form.ingredientes) }}
+        {{ form_widget(form.ingredientes) }}
+            </div>
+
+            <div class="control-group form-group">
+        {{ form_label(form.top) }}
+        {{ form_errors(form.top) }}
+        {{ form_widget(form.top) }}
+            </div>
+
+            <div>
+        {{ form_widget(form.Salvar) }}
+            </div>
+
+#}
+
+{{ form_end(form) }}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('js/nuevaImgTapa.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/nuevaCat.js') }}"></script>
+{% endblock %}
+

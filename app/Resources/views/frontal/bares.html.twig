@@ -1,0 +1,119 @@
+{# plantilla de nuestra aplicación #}
+{% extends 'base.html.twig' %}
+
+{# titulo #}
+{% block titulo %}
+Nuestro equipo
+{% endblock %}
+
+{# contenido #}
+{% block contenido %}
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Bar Shop
+        <small>Bares</small>
+    </h1>  
+
+    <!-- BAR VALENCIA -->
+    {% if sitio=='vlc' or sitio=='todos' %}
+    <div class="row">
+        <!-- Map Column -->
+        <div class="col-lg-8 mb-4">
+            <!-- Embedded Google Map -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d965.1074511377103!2d-90.51296926350041!3d14.631526757007862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDM3JzUyLjkiTiA5MMKwMzAnNDQuNyJX!5e0!3m2!1ses-419!2sgt!4v1556127577240!5m2!1ses-419!2sgt" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <!-- Contact Details Column -->
+        <div class="col-lg-4 mb-4">
+            <h3>Detalles de la agencia</h3>
+            <p>
+                17 Calle 8a. y 9a. Avenidas 8-46 Zona 1 
+                <br>Guatemala, Guatemala.
+                <br>
+            </p>
+            <p>
+                <abbr title="Teléfonos">P</abbr>: (502) 22513817 (502) 22383894.
+            </p>
+            <p>
+                <abbr title="E-mail">E</abbr>:
+                <a href="mailto:sistemasfdn@gmail.com">sistemasfdn@gmail.com
+                </a>
+            </p>
+            <p>
+                <abbr title="Horario">H</abbr>: Lunes - Domingo: 6:00 AM to 22:30 PM
+            </p>
+        </div>
+    </div>
+    <!-- /.row -->
+    
+    {% endif %}
+    
+    <!-- BAR BARCELONA -->
+    {% if sitio=='bcn' or sitio=='todos' %}
+    <div class="row">
+        <!-- Map Column -->
+        <div class="col-lg-8 mb-4">
+            <!-- Embedded Google Map -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3817.0901643510033!2d-89.89490739956709!3d16.920844047499912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDU1JzE1LjAiTiA4OcKwNTMnMzcuMCJX!5e0!3m2!1ses-419!2sgt!4v1556141505127!5m2!1ses-419!2sgt" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <!-- Contact Details Column -->
+        <div class="col-lg-4 mb-4">
+            <h3>Detalles de la agencia</h3>
+            <p>
+                Terminal de Buses, Santa Elena 
+                <br>Flores, Petén.
+                <br>
+            </p>
+            <p>
+                <abbr title="Teléfonos">P</abbr>: (502) 79262999 (502) 79260666.
+            </p>
+            <p>
+                <abbr title="E-mail">E</abbr>:
+                <a href="mailto:sistemasfdn@gmail.com">sistemasfdn@gmail.com
+                </a>
+            </p>
+            <p>
+                <abbr title="Horario">H</abbr>: Lunes - Domingo: 6:00 AM to 22:30 PM
+            </p>
+        </div>
+    </div>
+    <!-- /.row -->
+    
+    {% endif %}
+    
+    <!-- BAR MADRID -->
+    {% if sitio=='mdr' or sitio=='todos' %}
+    <div class="row">
+        <!-- Map Column -->
+        <div class="col-lg-8 mb-4">
+            <!-- Embedded Google Map -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3845.201384161579!2d-88.83065068567021!3d15.473596159235258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDI4JzI0LjkiTiA4OMKwNDknNDIuNSJX!5e0!3m2!1ses-419!2sgt!4v1556141291124!5m2!1ses-419!2sgt" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <!-- Contact Details Column -->
+        <div class="col-lg-4 mb-4">
+            <h3>Detalles de la agencia</h3>
+            <p>
+                Avenida Simón Bolivar 
+                <br>Morales, Izabal.
+                <br>
+            </p>
+            <p>
+                <abbr title="Teléfonos">P</abbr>: (502) 79478023.
+            </p>
+            <p>
+                <abbr title="E-mail">E</abbr>:
+                <a href="mailto:sistemasfdn@gmail.com">sistemasfdn@gmail.com
+                </a>
+            </p>
+            <p>
+                <abbr title="Horario">H</abbr>: Lunes - Domingo: 6:00 AM to 22:30 PM
+            </p>
+        </div>
+    </div>
+    <!-- /.row -->
+    
+    {% endif %}
+
+</div>
+{% endblock %}

@@ -1,0 +1,49 @@
+# To get started with security, check out the documentation:
+# https://symfony.com/doc/current/security.html
+security:
+    
+    # ESTAS SIGUIENTES LÍNEAS LAS COPIÉ DE https://symfony.com/doc/3.4/doctrine/registration_form.html
+    encoders:
+        AppBundle\Entity\Usuario: bcrypt
+
+    # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
+    providers:
+       # in_memory:
+       #     memory: ~
+        our_db_provider:
+            entity:
+                class: AppBundle:Usuario
+                property: username
+                # if you're using multiple entity managers
+                # manager_name: customer
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            anonymous: ~
+            provider: our_db_provider
+            # ESTAS SIGUIENTES LÍNEAS LAS COPIÉ DE https://symfony.com/doc/3.4/security/form_login_setup.html
+            form_login:
+                login_path: login
+                check_path: login
+            logout:
+                path:   /logout/
+                target: /
+                
+    access_control:
+        # require ROLE_ADMIN for /admin*
+        #- { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/gestionTapas, roles: ROLE_ADMIN }
+        - { path: ^/reservas, roles: ROLE_USER }
+        
+        # activate different ways to authenticate
+
+            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+            #http_basic: ~
+
+            # https://symfony.com/doc/current/security/form_login_setup.html
+            #form_login: ~

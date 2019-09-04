@@ -1,0 +1,49 @@
+{# vendor\symfony\symfony\src\Symfony\Bridge\Twig\Resources\views\Form\form_div_layout.html.twig  #}
+{%- block form_row -%}
+    <div class="control-group form-group">
+        <div class="controls">
+        {{- form_label(form) -}}
+        {{- form_errors(form) -}}
+        {{- form_widget(form) -}}
+        </div>
+    </div>
+{%- endblock form_row -%}
+
+{% block _tapa_categoria_widget %}
+
+    {#<div class="text_widget">
+        {#{{ block('form_widget_simple') }}#}
+       <!-- Prueba  -->
+    {#</div> #}
+
+        {{ block('choice_widget') }} Nueva Categoría <input type="text" name="" value="" id="nuevaCat"><button type="button" name="button" onclick="return nuevaCatAdd();">+</button>
+
+
+{% endblock %}
+
+{%- block form_widget_simple -%}
+    {%- set type = type|default('text') -%}
+    <input type="{{ type }}" class="form-control" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
+    {%- if type == 'file' -%}
+    <img id="tapaThumb" class="img-fluid" width="150px" src="" alt="">
+    {%- endif -%}
+{%- endblock form_widget_simple -%}
+    
+    {%- block textarea_widget -%}
+    <textarea class="form-control" {{ block('widget_attributes') }}>{{ value }}</textarea>
+{%- endblock textarea_widget -%}
+    
+    {%- block button_widget -%}
+    {%- if label is not same as(false) and label is empty -%}
+        {%- if label_format is not empty -%}
+            {% set label = label_format|replace({
+                '%name%': name,
+                '%id%': id,
+            }) %}
+        {%- else -%}
+            {% set label = name|humanize %}
+        {%- endif -%}
+    {%- endif -%}
+    <button type="{{ type|default('button') }}" class="btn btn-primary" {{ block('button_attributes') }}>{{ translation_domain is same as(false) ? label : label|trans({}, translation_domain) }}</button>
+{%- endblock button_widget -%}
+    

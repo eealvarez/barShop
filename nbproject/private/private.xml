@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/symfony4/barShop/app/config/parameters.yml</file>
+            <file>file:/C:/symfony4/barShop/app/config/security.yml</file>
+            <file>file:/C:/symfony4/barShop/src/AppBundle/Entity/Ingrediente.php</file>
+            <file>file:/C:/symfony4/barShop/app/Resources/views/gestionTapas/nuevoIngrediente.html.twig</file>
+            <file>file:/C:/symfony4/barShop/src/AppBundle/Repository/TapaRepository.php</file>
+            <file>file:/C:/symfony4/barShop/app/config/routing.yml</file>
+            <file>file:/C:/symfony4/barShop/src/AppBundle/Entity/Categoria.php</file>
+            <file>file:/C:/symfony4/barShop/app/Resources/views/frontal/categoria.html.twig</file>
+            <file>file:/C:/symfony4/barShop/app/config/config.yml</file>
+            <file>file:/C:/symfony4/barShop/app/Resources/views/frontal/login.html.twig</file>
+            <file>file:/C:/symfony4/barShop/app/Resources/views/base.html.twig</file>
+            <file>file:/C:/symfony4/barShop/app/Resources/views/gestionTapas/nuevaCategoria.html.twig</file>
+            <file>file:/C:/symfony4/barShop/app/Resources/views/frontal/nosotros.html.twig</file>
+            <file>file:/C:/symfony4/barShop/src/AppBundle/Entity/Tapa.php</file>
+            <file>file:/C:/symfony4/barShop/app/Resources/views/form/tapaForm.html.twig</file>
+            <file>file:/C:/symfony4/barShop/app/Resources/views/frontal/index.html.twig</file>
+            <file>file:/C:/symfony4/barShop/src/AppBundle/Entity/Reserva.php</file>
+            <file>file:/C:/symfony4/barShop/app/Resources/views/frontal/ingrediente.html.twig</file>
+            <file>file:/C:/symfony4/barShop/src/AppBundle/Form/TapaType.php</file>
+            <file>file:/C:/symfony4/barShop/app/Resources/views/frontal/bares.html.twig</file>
+            <file>file:/C:/symfony4/barShop/app/Resources/views/test/test.html.twig</file>
+            <file>file:/C:/symfony4/barShop/src/AppBundle/Controller/GestionTapasController.php</file>
+            <file>file:/C:/symfony4/barShop/src/AppBundle/Form/CategoriaType.php</file>
+            <file>file:/C:/symfony4/barShop/app/Resources/views/gestionTapas/nuevaTapa.html.twig</file>
+            <file>file:/C:/symfony4/barShop/web/js/nuevaImgTapa.js</file>
+            <file>file:/C:/symfony4/barShop/src/AppBundle/Form/UsuarioType.php</file>
+            <file>file:/C:/symfony4/barShop/src/AppBundle/Entity/Usuario.php</file>
+            <file>file:/C:/symfony4/barShop/app/Resources/views/frontal/registro.html.twig</file>
+            <file>file:/C:/symfony4/barShop/app/Resources/views/frontal/tapa.html.twig</file>
+            <file>file:/C:/symfony4/barShop/src/AppBundle/Controller/DefaultController.php</file>
+            <file>file:/C:/symfony4/barShop/src/AppBundle/Form/IngredienteType.php</file>
+            <file>file:/C:/symfony4/barShop/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig</file>
+        </group>
+    </open-files>
+</project-private>

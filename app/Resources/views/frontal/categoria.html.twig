@@ -1,0 +1,37 @@
+{# plantilla de nuestra aplicación #}
+{% extends 'base.html.twig' %}
+
+{# titulo #}
+{% block titulo %}
+Categoria
+{% endblock %}
+
+{# contenido #}
+{% block contenido %}
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Categoria
+     <!-- <small>Subheading</small> -->
+    </h1>
+
+    <!-- Portfolio Item Row -->
+    <div class="row">
+
+      <div class="col-md-8">
+        <img class="img-fluid" src="{{ asset(tapaImg~categoria.foto) }}" alt="">
+      </div>
+
+      <div class="col-md-4">
+        <h3 class="my-3">{{ categoria.nombre }}</h3>
+        <p>{{ categoria.descripcion }}</p>
+      </div>
+
+    </div>
+    <!-- /.row -->    
+
+  </div>
+  <!-- /.container -->
+{% endblock %}
+

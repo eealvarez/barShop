@@ -1,0 +1,126 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Reserva
+ *
+ * @ORM\Table(name="reserva")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ReservaRepository")
+ */
+class Reserva {
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="datetimetz")
+     */
+    private $fecha;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="comensales", type="integer")
+     */
+    private $comensales;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones", type="text", nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Usuario", inversedBy="reservas")
+     * @ORM\JoinColumn(name="usuario_id", referencedColumnName="id")
+     */
+    private $usuario;
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId() {
+        return $this->id;
+    }
+
+    /**
+     * Set fecha
+     *
+     * @param \DateTime $fecha
+     *
+     * @return Reserva
+     */
+    public function setFecha($fecha) {
+        $this->fecha = $fecha;
+
+        return $this;
+    }
+
+    /**
+     * Get fecha
+     *
+     * @return \DateTime
+     */
+    public function getFecha() {
+        return $this->fecha;
+    }
+
+    /**
+     * Set comensales
+     *
+     * @param integer $comensales
+     *
+     * @return Reserva
+     */
+    public function setComensales($comensales) {
+        $this->comensales = $comensales;
+
+        return $this;
+    }
+
+    /**
+     * Get comensales
+     *
+     * @return int
+     */
+    public function getComensales() {
+        return $this->comensales;
+    }
+
+    /**
+     * Set observaciones
+     *
+     * @param string $observaciones
+     *
+     * @return Reserva
+     */
+    public function setObservaciones($observaciones) {
+        $this->observaciones = $observaciones;
+
+        return $this;
+    }
+
+    /**
+     * Get observaciones
+     *
+     * @return string
+     */
+    public function getObservaciones() {
+        return $this->observaciones;
+    }
+
+}

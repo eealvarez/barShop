@@ -1,0 +1,39 @@
+{# plantilla de nuestra aplicación #}
+{% extends 'base.html.twig' %}
+{% form_theme form 'form/tapaForm.html.twig' %}
+
+{# titulo #}
+{% block titulo %}
+Registro de usuario
+{% endblock %}
+
+{# contenido #}
+{% block contenido %}
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Bar Shop
+        <small>Registro de usuario</small>
+    </h1>
+
+    <!-- Intro Content -->
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            {{ form_start(form) }}
+{{ form_widget(form) }}
+{{ form_end(form) }}
+        </div>
+        <div class="col-lg-6">
+            <h2>¿Para qué registrarse?</h2>
+            <p>Con el registro de usuario se podrá realizar reservas para nuestro portal de una forma rápida y sencilla.</p>
+            <p>Mediante la introducción del correo electrónico y la contraseña, podréis realizar una nueva reserva de mesa o anulación de estacionamiento</p>
+
+        </div>
+    </div>
+    <!-- /.row -->
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{# plantilla de nuestra aplicación #}
+{% extends 'base.html.twig' %}
+
+
+{# titulo #}
+{% block titulo %}
+Reservas
+{% endblock %}
+
+{# contenido #}
+{% block contenido %}
+<!-- Page Content -->
+<div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Reservas
+        <!-- <small>Subheading</small> -->
+    </h1>
+    <!-- Portfolio Item Row -->
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Num Comensales</th>
+                        <th scope="col">Observaciones</th>
+                        <th scope="col">Borrar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for reserva in reservas %}
+                    <tr>                        
+                        <th scope="row"><a href="{{ path('nuevaReserva', {'id': reserva.id}) }}"><i class="fas fa-pencil-alt"></i></a></th>
+                        <th>{{reserva.fecha|date('Y/m/d h:i')}}</th>
+                        <th>{{reserva.comensales}}</th>
+                        <th>{{reserva.observaciones}}</th>
+                        <th scope="row"><a href="#" onclick="return controlBorrado('{{ path('borrarReserva', {'id': reserva.id}) }}', '{{reserva.fecha|date('Y/m/d h:i')}}');"><i class="fas fa-trash-alt"></i></a></th>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="{{ asset('js/controlBorrado.js') }}"></script>
+{% endblock %}
+
